@@ -130,6 +130,7 @@ table {
 }
 
 /* Main CSS */
+/* General */
 a {
   text-decoration: none;
 }
@@ -165,6 +166,13 @@ nav,
   justify-content: space-around;
 }
 
+footer h3,
+#description h1,
+#duration h1 {
+  color: #e6332a;
+}
+
+/* Navigation bar */
 nav {
   align-items: center;
   justify-content: space-around;
@@ -177,21 +185,95 @@ nav {
   z-index: 99;
 }
 
-nav a {
+nav ul {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+}
+
+nav ul li {
   color: black;
   flex: 1;
   text-align: center;
 }
 
-nav a:hover {
+nav ul li a {
+  color: black;
+
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+nav ul li a:hover {
   color: #213a8f;
 }
 
+nav ul li a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #213a8f;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+nav ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/* Main content */
 main {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
+/* Hero section */
+#logo-box {
+  position: absolute;
+  top: 240px;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+#logo-box > img {
+  vertical-align: middle;
+}
+
+#hero-background {
+  display: flex;
+  width: 100%;
+}
+
+#hero-background img {
+  height: 30rem;
+  flex: 1;
+  object-fit: cover;
+}
+
+/* Duration */
+#duration {
+  text-align: center;
+}
+
+#duration h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#duration p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Register button */
 #register {
   text-align: center;
   margin-top: 3rem;
@@ -223,17 +305,7 @@ main {
   transition: 0.3s;
 }
 
-#bottom-line {
-  align-items: center;
-  background: #213a8f;
-  color: white;
-  height: 5vh;
-}
-
-#bottom-line a {
-  color: white;
-}
-
+/* Description */
 #description {
   padding: 0 5rem;
 }
@@ -261,48 +333,7 @@ main {
   margin-bottom: 5rem;
 }
 
-#description h1,
-footer h3,
-#duration h1 {
-  color: #e6332a;
-}
-
-#duration {
-  text-align: center;
-}
-
-#duration h1 {
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-#duration p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-#logo-box {
-  position: absolute;
-  top: 240px;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-}
-
-#logo-box > img {
-  vertical-align: middle;
-}
-
-#hero-background {
-  display: flex;
-  width: 100%;
-}
-
-#hero-background img {
-  height: 30rem;
-  flex: 1;
-  object-fit: cover;
-}
-
+/* Sponser */
 #sponser-banner img,
 #sponser-logo img {
   max-width: 100%;
@@ -326,6 +357,7 @@ footer h3,
   transform: scale(1.2);
 }
 
+/* Footer */
 footer {
   background: #fafafa;
   padding-top: 3rem;
@@ -357,8 +389,16 @@ footer > div > h3 {
 }
 
 #bottom-line {
+  align-items: center;
+  background: #213a8f;
+  color: white;
   font-size: 0.9rem;
   font-weight: bold;
+  height: 5vh;
+}
+
+#bottom-line a {
+  color: white;
 }
 
 @media (max-width: 1024px) {
@@ -366,6 +406,10 @@ footer > div > h3 {
   footer,
   #bottom-line {
     padding: 0 5rem;
+  }
+
+  nav ul {
+    width: 70%;
   }
 
   #duration {
@@ -387,6 +431,10 @@ footer > div > h3 {
   footer,
   #bottom-line {
     padding: 0 3rem;
+  }
+
+  nav ul {
+    width: 80%;
   }
 
   footer {

@@ -8,17 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       data.navbarItems.map(navItem => {
+        const navLiElement = document.createElement("li");
         const navAElement = document.createElement("a");
         navAElement.textContent = navItem.label;
         navAElement.href = navItem.href;
         navAElement.target = "_blank";
         navAElement.rel = "noreferrer";
+        navLiElement.appendChild(navAElement);
         const bottomLineAElement = document.createElement("a");
         bottomLineAElement.textContent = navItem.label;
         bottomLineAElement.href = navItem.href;
         bottomLineAElement.target = "_blank";
         bottomLineAElement.rel = "noreferrer";
-        document.querySelector("nav").appendChild(navAElement);
+        document.querySelector("nav ul").appendChild(navLiElement);
         document.querySelector("#bottom-line").appendChild(bottomLineAElement);
       });
 
@@ -42,7 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       document.querySelector("#condition+.lds-roller").remove();
     })
-    .catch(err => console.log(err));
+    .catch(err => {
+      console.log(err);
+      //TODO: Handle somehow
+    });
 });
-
-// TODO: Change syntax to support older browser
