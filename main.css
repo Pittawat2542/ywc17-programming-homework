@@ -372,10 +372,13 @@ footer a {
   color: black;
 }
 
-footer > img {
+footer #footer-logo {
+  text-align: right;
+}
+
+footer img {
   vertical-align: middle;
   height: 10rem;
-  margin-right: 5rem;
 }
 
 footer > div {
@@ -451,8 +454,79 @@ footer > div > h3 {
   }
 }
 
-/* Loading Spinner */
+@media (max-width: 425px) {
+  main,
+  footer,
+  #bottom-line {
+    padding: 0 1rem;
+  }
 
+  #hero-background img {
+    height: 25rem;
+    width: 10%;
+  }
+
+  #duration h1 {
+    font-size: 1.8rem;
+  }
+
+  #btnRegister {
+    min-width: 100%;
+  }
+
+  #description {
+    padding: 0;
+  }
+
+  #description h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #sponser-banner {
+    flex-wrap: wrap;
+  }
+
+  #sponser-logo {
+    flex-wrap: wrap;
+  }
+
+  #sponser-logo a {
+    flex-basis: 33.33%;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+
+  footer div {
+    flex-basis: 100%;
+  }
+
+  footer #footer-logo {
+    width: 50%;
+  }
+
+  footer img {
+    display: block;
+    height: auto;
+  }
+
+  #bottom-line {
+    flex-wrap: wrap;
+    height: 20vh;
+    padding: 1rem;
+  }
+
+  #bottom-line a,
+  #bottom-line p {
+    flex: 1;
+    flex-basis: 100%;
+    padding: 1rem;
+  }
+}
+
+/* Loading Spinner */
 .lds-roller {
   display: inline-block;
   position: relative;
