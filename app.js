@@ -12,10 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
         navAElement.textContent = navItem.label;
         navAElement.href = navItem.href;
         navAElement.target = "_blank";
+        navAElement.rel = "noreferrer";
         const bottomLineAElement = document.createElement("a");
         bottomLineAElement.textContent = navItem.label;
         bottomLineAElement.href = navItem.href;
         bottomLineAElement.target = "_blank";
+        bottomLineAElement.rel = "noreferrer";
         document.querySelector("nav").appendChild(navAElement);
         document.querySelector("#bottom-line").appendChild(bottomLineAElement);
       });
