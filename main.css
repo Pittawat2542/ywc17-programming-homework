@@ -150,7 +150,8 @@ nav,
 
 footer,
 main,
-nav, #bottom-line {
+nav,
+#bottom-line {
   margin: 0 auto;
   padding: 0 15rem;
 }
@@ -205,6 +206,7 @@ main {
 }
 
 #btnRegister {
+  border: none;
   background: #213a8f;
   color: white;
   height: 30%;
@@ -241,7 +243,8 @@ main {
   line-height: 1.5;
 }
 
-#detail, #condition {
+#detail,
+#condition {
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -250,7 +253,7 @@ main {
   font-size: 1.2rem;
   font-weight: bold;
   margin-top: 1.5rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 #condition {
@@ -290,18 +293,13 @@ footer h3,
 
 #hero-background {
   display: flex;
-}
-
-#hero-background div {
-  flex: 1;
-  display: flex;
-  align-content: stretch;
-  align-items: stretch;
-  justify-content: center;
-}
-
-#hero-background div img {
   width: 100%;
+}
+
+#hero-background img {
+  height: 30rem;
+  flex: 1;
+  object-fit: cover;
 }
 
 #sponser-banner img,
@@ -318,9 +316,13 @@ footer h3,
   width: 50%;
 }
 
-#sponsers-logo > a > img:hover {
+#sponser-logo img {
+  transition: all 0.3s ease-in-out;
+}
+
+#sponser-logo img:hover {
+  transition: all 0.3s ease-in-out;
   transform: scale(1.2);
-  transition: all 0.55s ease-in-out;
 }
 
 footer {
@@ -352,7 +354,7 @@ footer > div > h3 {
 }
 
 #bottom-line {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 
