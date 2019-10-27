@@ -11,24 +11,34 @@ document.addEventListener("DOMContentLoaded", () => {
         const navAElement = document.createElement("a");
         navAElement.textContent = navItem.label;
         navAElement.href = navItem.href;
+        navAElement.target = "_blank";
         const bottomLineAElement = document.createElement("a");
         bottomLineAElement.textContent = navItem.label;
         bottomLineAElement.href = navItem.href;
+        bottomLineAElement.target = "_blank";
         document.querySelector("nav").appendChild(navAElement);
         document.querySelector("#bottom-line").appendChild(bottomLineAElement);
       });
+
+      document.querySelector("nav .lds-roller").remove();
 
       const durationH1Element = document.createElement("h1");
       durationH1Element.textContent = data.duration;
       document.querySelector("#duration").appendChild(durationH1Element);
 
+      document.querySelector("#duration .lds-roller").remove();
+
       const detailPElement = document.createElement("p");
       detailPElement.innerHTML = data.detail;
       document.querySelector("#detail").appendChild(detailPElement);
 
+      document.querySelector("#detail+.lds-roller").remove();
+
       const conditionPElement = document.createElement("p");
       conditionPElement.innerHTML = data.condition;
       document.querySelector("#condition").appendChild(conditionPElement);
+
+      document.querySelector("#condition+.lds-roller").remove();
     })
     .catch(err => console.log(err));
 });

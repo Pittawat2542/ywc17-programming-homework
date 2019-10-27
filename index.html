@@ -4,9 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta
+      property="og:url"
+      content="https://pittawat2542.github.io/ywc17-programming-homework"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="มาตรการส่งเสริมการท่องเที่ยวในประเทศ “ชิมช้อปใช้”"
+    />
+    <meta
+      property="og:description"
+      content="ผู้สนใจเข้าร่วมมาตรการฯ สามารถลงทะเบียน ตั้งแต่ วันที่ 23 ก.ย. - 15 พ.ย. 62"
+    />
+    <meta
+      property="title"
+      content="มาตรการส่งเสริมการท่องเที่ยวในประเทศ “ชิมช้อปใช้”"
+    />
+    <meta
+      property="description"
+      content="ผู้สนใจเข้าร่วมมาตรการฯ สามารถลงทะเบียน ตั้งแต่ วันที่ 23 ก.ย. - 15 พ.ย. 62"
+    />
+
     <title>ชิมช้อปใช้</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Pridi:300,700|Prompt:400,700&display=swap" rel="stylesheet">
+    <link rel="preload" href="main.css" as="style" />
+    <link rel="preload" href="img/banner-left.png" as="image" />
+    <link rel="preload" href="img/banner-center.png" as="image" />
+    <link rel="preload" href="img/banner-right.png" as="image" />
+    <link rel="preload" href="img/banner.png" as="image" />
+    <link rel="preload" href="img/Banner_CGD_Sq.png" as="image" />
+    <link rel="preload" href="img/Banner_KTB_SQ.png" as="image" />
+    <link rel="preload" href="img/Banner_TAT_Hotline_Sq.png" as="image" />
+    <link rel="preload" href="img/CGD.png" as="image" />
+    <link rel="preload" href="img/footer.png" as="image" />
+    <link rel="preload" href="img/FPO.png" as="image" />
+    <link rel="preload" href="img/Krungthai.png" as="image" />
+    <link rel="preload" href="img/MOF.png" as="image" />
+    <link rel="preload" href="img/MOTS.png" as="image" />
+    <link rel="preload" href="img/TAT.png" as="image" />
+
+    <link rel="shortcut icon" href="img/footer.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pridi:300,600|Prompt:400,600&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="main.css" />
 
     <script
@@ -15,96 +59,151 @@
     ></script>
   </head>
   <body>
-    <nav></nav>
+    <nav>
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
     <header>
-      <img src="/img/banner.png" alt="Logo" />
+      <div id="logo-box">
+        <img src="img/banner.png" alt="Logo" />
+      </div>
       <div id="hero-background">
-        <img src="/img/banner-left.png" alt="Left banner" />
-        <img src="/img/banner-center.png" alt="Center banner" />
-        <img src="/img/banner-right.png" alt="Right banner" />
+        <div>
+          <img src="img/banner-left.png" alt="Left banner" />
+        </div>
+        <div>
+          <img src="img/banner-center.png" alt="Center banner" />
+        </div>
+        <div>
+          <img src="img/banner-right.png" alt="Right banner" />
+        </div>
       </div>
     </header>
     <main>
-      <!-- <div class="lds-roller">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div> -->
       <section id="duration">
         <p>ตั้งแต่วันที่</p>
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </section>
-      <a href="https://regist.ชิมช้อปใช้.com/Register/">
-        <button id="btnRegister">
-          ลงทะเบียน เฟส 2<br />ตั้งแต่วันที่ 24 ต.ค.62 วันละ 2 รอบ เวลา 6.00 และ
-          18.00 น.<br />(จำกัดจำนวนผู้ลงทะเบียนรอบละ 5 แสนคน รวม 1 ล้านคนต่อวัน)
-        </button>
-      </a>
-      <hr />
+      <section id="register">
+        <a
+          href="https://regist.ชิมช้อปใช้.com/Register/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button id="btnRegister">
+            ลงทะเบียน เฟส 2<br />ตั้งแต่วันที่ 24 ต.ค.62 วันละ 2 รอบ เวลา 6.00
+            และ 18.00 น.<br />(จำกัดจำนวนผู้ลงทะเบียนรอบละ 5 แสนคน รวม 1
+            ล้านคนต่อวัน)
+          </button>
+        </a>
+        <hr />
+      </section>
       <section id="description">
-        <h1>มาตรการส่งเสริมการบริโภค ในประเทศ “ชิมช้อปใช้”</h1>
+        <h1>มาตรการส่งเสริมการบริโภค<br />ในประเทศ “ชิมช้อปใช้”</h1>
         <p id="detail"></p>
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
         <h2>เงื่อนไขการเข้าร่วมมาตรการ</h2>
         <p id="condition"></p>
+        <div class="lds-roller">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </section>
       <section id="sponsor">
         <div id="sponser-banner">
-          <a href="tel:021111144"
-            ><img src="/img/Banner_KTB_SQ.png" alt="KTB Banner"
+          <a href="tel:021111144" rel="noreferrer"
+            ><img src="img/Banner_KTB_SQ.png" alt="KTB Banner"
           /></a>
-          <a href="tel:022706400"
-            ><img src="/img/Banner_CGD_Sq.png" alt="CDG Banner"
+          <a href="tel:022706400" rel="noreferrer"
+            ><img src="img/Banner_CGD_Sq.png" alt="CDG Banner"
           /></a>
-          <a href="tel:1672"
-            ><img src="/img/Banner_TAT_Hotline_Sq.png" alt="TAT Banner"
+          <a href="tel:1672" rel="noreferrer"
+            ><img src="img/Banner_TAT_Hotline_Sq.png" alt="TAT Banner"
           /></a>
         </div>
         <div id="sponser-logo">
-          <a href="https://www.mof.go.th/th/home"
-            ><img src="/img/MOF.png" alt="MOF Logo"
+          <a
+            href="https://www.mof.go.th/th/home"
+            target="_blank"
+            rel="noreferrer"
+            ><img src="img/MOF.png" alt="MOF Logo"
           /></a>
-          <a href="http://www.fpo.go.th/"
-            ><img src="/img/FPO.png" alt="FPO Logo"
+          <a href="http://www.fpo.go.th/" target="_blank" rel="noreferrer"
+            ><img src="img/FPO.png" alt="FPO Logo"
           /></a>
-          <a href="https://www.cgd.go.th/"
-            ><img src="/img/CGD.png" alt="CDG Logo"
+          <a href="https://www.cgd.go.th/" target="_blank" rel="noreferrer"
+            ><img src="img/CGD.png" alt="CDG Logo"
           /></a>
-          <a href="https://www.newcb.ktb.co.th/"
-            ><img src="/img/Krungthai.png" alt="KTB Logo"
+          <a
+            href="https://www.newcb.ktb.co.th/"
+            target="_blank"
+            rel="noreferrer"
+            ><img src="img/Krungthai.png" alt="KTB Logo"
           /></a>
-          <a href="https://www.mots.go.th/"
-            ><img src="/img/MOTS.png" alt="MOTS Logo"
+          <a href="https://www.mots.go.th/" target="_blank" rel="noreferrer"
+            ><img src="img/MOTS.png" alt="MOTS Logo"
           /></a>
-          <a href="https://thai.tourismthailand.org/"
-            ><img src="/img/TAT.png" alt="TAT Logo"
+          <a
+            href="https://thai.tourismthailand.org/"
+            target="_blank"
+            rel="noreferrer"
+            ><img src="img/TAT.png" alt="TAT Logo"
           /></a>
         </div>
       </section>
     </main>
     <footer>
-      <img src="/img/footer.png" alt="Logo" />
+      <img src="img/footer.png" alt="Logo" />
       <div>
         <h3>ข้อมูลลงทะเบียนประชาชน</h3>
         <p>
           การรับสิทธิ การใช้งานแอปพลิเคชั่น “เป๋าตัง” และ “ถุงเงิน” ติดต่อ
-          ชิมช้อปใช้ Call Center by Krungthai โทร.0 2111 1144
+          ชิมช้อปใช้ Call Center by Krungthai โทร.
+          <a href="tel:021111144" rel="noreferrer">0 2111 1144</a>
         </p>
       </div>
       <div>
         <h3>ข้อมูลลงทะเบียนผู้ประกอบการ</h3>
         <p>
-          เงื่อนไขและวิธีการเข้าร่วมมาตรการฯ ติดต่อ โทร.0 2270 6400 กด 7
+          เงื่อนไขและวิธีการเข้าร่วมมาตรการฯ ติดต่อ โทร.
+          <a href="tel:022706400" rel="noreferrer">0 2270 6400 กด 7</a>
         </p>
       </div>
       <div>
         <h3>ข้อมูลเที่ยวชิมช้อปใช้</h3>
-        <p>
-          ติดต่อ ททท. โทร1672
-        </p>
+        <p>ติดต่อ ททท. โทร <a href="tel:1672" rel="noreferrer">1672</a></p>
       </div>
     </footer>
     <div id="bottom-line">
