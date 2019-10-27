@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector("#bottom-line").appendChild(bottomLineAElement);
       });
 
-      const durationPElement = document.createElement("p");
-      durationPElement.textContent = data.duration;
-      document.querySelector("#duration").appendChild(durationPElement);
+      const durationH1Element = document.createElement("h1");
+      durationH1Element.textContent = data.duration;
+      document.querySelector("#duration").appendChild(durationH1Element);
 
       const detailPElement = document.createElement("p");
       detailPElement.innerHTML = data.detail;
