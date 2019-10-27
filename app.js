@@ -1,12 +1,36 @@
-fetch("https://panjs.com/ywc.json")
-.then(response => response.json())
-.then(data => {
-    for(property in data) {
-        const li = document.createElement("li");
-        li.innerText = data[property];
-        document.querySelector("#result").appendChild(li);
-    }
-})
-.catch(err => console.log(err));
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("https://panjs.com/ywc.json")
+    .then(response => response.json())
+    .then(data => {
+      if (Object.entries(data).length === 0 && data.constructor === Object) {
+        console.log("Data fetched is empty.");
+        //TODO: Handle somehow
+      }
+
+      data.navbarItems.map(navItem => {
+        const navAElement = document.createElement("a");
+        navAElement.textContent = navItem.label;
+        navAElement.href = navItem.href;
+        const bottomLineAElement = document.createElement("a");
+        bottomLineAElement.textContent = navItem.label;
+        bottomLineAElement.href = navItem.href;
+        document.querySelector("nav").appendChild(navAElement);
+        document.querySelector("#bottom-line").appendChild(bottomLineAElement);
+      });
+
+      const durationPElement = document.createElement("p");
+      durationPElement.textContent = data.duration;
+      document.querySelector("#duration").appendChild(durationPElement);
+
+      const detailPElement = document.createElement("p");
+      detailPElement.innerHTML = data.detail;
+      document.querySelector("#detail").appendChild(detailPElement);
+
+      const conditionPElement = document.createElement("p");
+      conditionPElement.innerHTML = data.condition;
+      document.querySelector("#condition").appendChild(conditionPElement);
+    })
+    .catch(err => console.log(err));
+});
 
 // TODO: Change syntax to support older browser
