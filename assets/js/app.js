@@ -29,23 +29,23 @@ document.addEventListener("DOMContentLoaded", () => {
       data.navbarItems.map(navItem => {
         const navLiElement = document.createElement("li");
         const navAElement = document.createElement("a");
-        navAElement.textContent = navItem.label;
-        navAElement.href = navItem.href;
+        navAElement.textContent = DOMPurify.sanitize(navItem.label);
+        navAElement.href = DOMPurify.sanitize(navItem.href);
         navAElement.target = "_blank";
         navAElement.rel = "noreferrer";
         navLiElement.appendChild(navAElement);
 
         const mobileNavLiElement = document.createElement("li");
         const mobileNavAElement = document.createElement("a");
-        mobileNavAElement.textContent = navItem.label;
-        mobileNavAElement.href = navItem.href;
+        mobileNavAElement.textContent = DOMPurify.sanitize(navItem.label);
+        mobileNavAElement.href = DOMPurify.sanitize(navItem.href);
         mobileNavAElement.target = "_blank";
         mobileNavAElement.rel = "noreferrer";
         mobileNavLiElement.appendChild(mobileNavAElement);
 
         const bottomLineAElement = document.createElement("a");
-        bottomLineAElement.textContent = navItem.label;
-        bottomLineAElement.href = navItem.href;
+        bottomLineAElement.textContent = DOMPurify.sanitize(navItem.label);
+        bottomLineAElement.href = DOMPurify.sanitize(navItem.href);
         bottomLineAElement.target = "_blank";
         bottomLineAElement.rel = "noreferrer";
 
@@ -59,19 +59,19 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("nav .lds-roller").remove();
 
       const durationH1Element = document.createElement("h1");
-      durationH1Element.textContent = data.duration;
+      durationH1Element.textContent = DOMPurify.sanitize(data.duration);
       document.querySelector("#duration").appendChild(durationH1Element);
 
       document.querySelector("#duration .lds-roller").remove();
 
       const detailPElement = document.createElement("p");
-      detailPElement.innerHTML = data.detail;
+      detailPElement.innerHTML = DOMPurify.sanitize(data.detail);
       document.querySelector("#detail").appendChild(detailPElement);
 
       document.querySelector("#detail+.lds-roller").remove();
 
       const conditionPElement = document.createElement("p");
-      conditionPElement.innerHTML = data.condition;
+      conditionPElement.innerHTML = DOMPurify.sanitize(data.condition);
       document.querySelector("#condition").appendChild(conditionPElement);
 
       document.querySelector("#condition+.lds-roller").remove();
